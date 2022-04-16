@@ -41,6 +41,8 @@ void main(){
 
     double ans2 = (-b - sqrt(b*b - 4*a*c))/2*a;     //x1
 
+    printf("Calculated x1s: %ld %ld ", ans1, ans2);
+
     float angle1 = atan( (sqrt(a*a - ans1*ans1))/ans1 );
 
     float angle2 = atan( (sqrt(a*a - ans1*ans1))/ans1 );
