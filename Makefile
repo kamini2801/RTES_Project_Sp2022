@@ -7,19 +7,16 @@ CFLAGS= -O0 -g $(INCLUDE_DIRS) $(CDEFS)
 LIBS= 
 
 HFILES= 
-CFILES= trig.c process.c
+CFILES= process.c
 
 SRCS= ${HFILES} ${CFILES}
 OBJS= ${CFILES:.c=.o}
 
-all:	trig process
+all:	process
 
 clean:
 	-rm -f *.o *.d
-	-rm -f trig
-
-trig: trig.o
-	$(CC) $(LDFLAGS) $(CFLAGS) -o $@ $@.o -lm -lrt
+	-rm -f process
 
 process: process.o
 	$(CC) $(LDFLAGS) $(CFLAGS) -o $@ $@.o -lm -lrt
